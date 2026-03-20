@@ -16,6 +16,7 @@ taskflow/
 ```
 
 ---
+<img width="1918" height="578" alt="image" src="https://github.com/user-attachments/assets/09814195-a9b8-48bf-9bc5-c01049550ebf" />
 
 ## Quick Start
 
