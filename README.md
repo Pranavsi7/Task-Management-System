@@ -3,6 +3,7 @@
 A full-stack task management app built with **Node.js + TypeScript + Prisma** (backend) and **Next.js + TypeScript + Tailwind** (frontend).
 
 ---
+<img width="1915" height="908" alt="image" src="https://github.com/user-attachments/assets/b43424d4-724a-42f0-a82d-67298be9cec7" />
 
 ## Project Structure
 
