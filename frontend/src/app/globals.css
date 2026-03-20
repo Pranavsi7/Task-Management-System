@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --bg: #f8f7ff;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f0fe;
+  --border: #e5e3ff;
+  --text-primary: #1a1730;
+  --text-secondary: #6b6894;
+  --text-muted: #a09ec0;
+  --brand: #6366f1;
+  --brand-dark: #4f46e5;
+  --brand-light: #e0e9ff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow-sm: 0 1px 3px rgba(99,102,241,0.08);
+  --shadow-md: 0 4px 16px rgba(99,102,241,0.12);
+  --shadow-lg: 0 8px 32px rgba(99,102,241,0.16);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm text-white
+           transition-all duration-150 active:scale-95;
+    background: var(--brand);
+    box-shadow: 0 2px 8px rgba(99,102,241,0.35);
+  }
+  .btn-primary:hover { background: var(--brand-dark); }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm
+           transition-all duration-150 active:scale-95;
+    color: var(--text-secondary);
+    background: transparent;
+  }
+  .btn-ghost:hover { background: var(--bg-subtle); color: var(--text-primary); }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-lg font-medium text-sm text-white
+           transition-all duration-150 active:scale-95;
+    background: var(--danger);
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-xl text-sm outline-none transition-all duration-150;
+    border: 1.5px solid var(--border);
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+  }
+  .input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(99,102,241,0.12); }
+  .input::placeholder { color: var(--text-muted); }
+
+  .label {
+    @apply block text-xs font-semibold mb-1.5 tracking-wide;
+    color: var(--text-secondary);
+  }
+
+  .badge-pending   { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold; background:#fff3cd; color:#92680a; }
+  .badge-progress  { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold; background:#dbeafe; color:#1d4ed8; }
+  .badge-done      { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold; background:#d1fae5; color:#065f46; }
+  .badge-low       { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; background:#f3f4f6; color:#6b7280; }
+  .badge-medium    { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; background:#fef3c7; color:#92400e; }
+  .badge-high      { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; background:#fee2e2; color:#991b1b; }
+}
